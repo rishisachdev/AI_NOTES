@@ -5,7 +5,7 @@ This project satisfies requirements from the assignment while keeping the codeba
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ai_notes/
@@ -29,7 +29,7 @@ All notes logic (CRUD, upload, translate, stats, serializers, router) lives in *
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 - **Python 3.11**
 - **Django + Django REST Framework**
@@ -51,17 +51,17 @@ SQLite is removed in favor of Postgres for the assignment.
 
 ---
 
-## 🚀 Features
+##  Features
 
-### ✔ Notes CRUD
+###  Notes CRUD
 
 `/api/notes/` supports create, list, retrieve, update, delete.
 
-### ✔ Upload `.txt` Files
+###  Upload `.txt` Files
 
 `POST /api/notes/upload/` creates a note from a text file.
 
-### ✔ Translate Notes
+###  Translate Notes
 
 `POST /api/notes/<id>/translate/`  
 Stores translated text + language in the same note.
@@ -72,7 +72,7 @@ A deterministic translation stub is used for self-containment:
 TRANSLATED(<lang>): <reversed_text>
 ```
 
-### ✔ Stats Endpoint
+###  Stats Endpoint
 
 `GET /api/stats/` returns:
 
@@ -82,7 +82,7 @@ TRANSLATED(<lang>): <reversed_text>
 
 Cached for 60 seconds in Redis.
 
-### ✔ Fully Dockerized
+###  Fully Dockerized
 
 One command spins up the entire stack:
 
@@ -92,7 +92,7 @@ One command spins up the entire stack:
 
 ---
 
-## 🛠 Running the Project with Docker
+##  Running the Project with Docker
 
 From the project root:
 
@@ -114,7 +114,7 @@ http://localhost:8000/api/
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Notes CRUD
 
@@ -159,7 +159,7 @@ GET /api/stats/
 
 ---
 
-## 📐 High-Level Design (HLD)
+##  High-Level Design (HLD)
 
 ```
             ┌────────────┐
@@ -181,7 +181,7 @@ GET /api/stats/
 
 ---
 
-## 📏 Low-Level Design (LLD)
+##  Low-Level Design (LLD)
 
 ### Model: `Note`
 
@@ -224,7 +224,7 @@ GET /api/stats/
 
 ---
 
-## 🔐 Environment Variables
+##  Environment Variables
 
 The service supports `.env` or environment-based configuration:
 
@@ -236,7 +236,7 @@ DJANGO_SECRET_KEY=yourkey
 
 ---
 
-## 🧪 Example Requests
+##  Example Requests
 
 ### Create a Note
 
@@ -262,7 +262,7 @@ curl -X POST http://localhost:8000/api/notes/1/translate/   -H "Content-Type: ap
 
 ---
 
-## 📝 Notes
+##  Notes
 
 - Kept intentionally minimal (few files).
 - All optional assignment components (JWT, Celery, GraphQL) are not included because they were explicitly optional.
@@ -271,6 +271,6 @@ curl -X POST http://localhost:8000/api/notes/1/translate/   -H "Content-Type: ap
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 The solution is lightweight, readable, and fully functional—ideal for review and deployment.
