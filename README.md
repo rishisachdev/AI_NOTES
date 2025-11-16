@@ -203,7 +203,7 @@ GET /api/stats/
 
 ---
 
-## ☁ AWS Deployment
+##  AWS Deployment
 
 ### Option A — EC2 Deployment (simple)
 
